@@ -11,6 +11,6 @@ Perfection linux destroys your system any time you run something that doesn't re
 Perfect commands only.
 
 ## Installation
-`curl https://raw.githubusercontent.com/s00ner/perfection-linux/master/perfection.bashrc > /etc/bash.bashrc'
+`curl https://raw.githubusercontent.com/s00ner/perfection-linux/master/perfection.bashrc > /etc/bash.bashrc`
 
 That's it for now. This only works on distros that use /etc/bash.bashrc and I've only confirmed it on Ubuntu and Debian.
